@@ -2,8 +2,8 @@ var List = [];
 
 var List = JSON.parse(localStorage.getItem("bookList")) || [];
 
-List.forEach(Book => {
-    CreateCard(Book.Title , Book.Author , Book.Pages , Book.Read)
+List.forEach((Book,i) => {
+    CreateCard(Book.Title , Book.Author , Book.Pages , Book.Read , i)
 });
 
 $('#staticBackdrop').on('hide.bs.modal', function () {
